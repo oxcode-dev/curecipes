@@ -1,12 +1,16 @@
 {
-  "name": "curecipes",
+  "name": "urecipes",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "now-build": "npm run build",
   "dependencies": {
+    "axios": "^0.19.2",
+    "now": "^17.0.4",
+    "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5"
   },
