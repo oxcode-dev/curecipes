@@ -1,5 +1,9 @@
 <template>
   <div class="hello">
+    <div class="flex items-center">
+      <Logo class="w-20 h-10" />
+      <span class="logo-text">curecipes</span>
+    </div>
     <h1>{{ msg }}</h1>
 <main class="py-4">
   <div class="px-4">
@@ -59,20 +63,46 @@
     </div>
   </div>
 </main>
+  <pre class="text-left">{{ a }}</pre>
   </div>
 </template>
 
 <script>
+import axios from "axios"
+import Logo from "@/Shared/Logo"
 export default {
   name: 'HelloWorld',
+  components: {Logo},
   props: {
     msg: String
+  },
+
+  data(){
+    return{
+      a: {}
+    }
+  },
+
+  methods:{
+    x(){
+      axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=potato').then(n => this.a = n);
+    }
+  },
+
+  mounted(){
+    this.x()
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.logo-text{
+  margin-left: -17px;
+  margin-top: 3px;
+  font-family: 'Pacifico', cursive;
+  color: #9c503c;
+}
 h3 {
   margin: 40px 0 0;
 }

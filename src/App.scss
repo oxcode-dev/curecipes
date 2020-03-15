@@ -1,2 +1,11 @@
 @import "../node_modules/tailwindcss/dist/components.min.css";
 @import "../node_modules/tailwindcss/dist/tailwind.min.css";
+@import "../node_modules/tailwindcss/dist/base.min.css";
+@import "../node_modules/tailwindcss/dist/utilities.min.css";
+
+.logo-text{
+    margin-left: -17px;
+    margin-top: 3px;
+    font-family: 'Pacifico', cursive;
+    color: #dfa000;
+}
